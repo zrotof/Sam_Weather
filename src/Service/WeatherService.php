@@ -8,6 +8,7 @@ use Symfony\Component\Config\Definition\Exception\Exception;
 
 
 
+
 class WeatherService
 {
 
@@ -36,7 +37,7 @@ class WeatherService
             $statusCode = $response->getStatusCode();
             
             if( $statusCode == 404 ) {
-                throw new Exception('Nous ne trouvons aucun résultat,veuillez vérifier l\'orthographe de la ville et reessayez.');
+                throw new Exception('Nous ne trouvons aucun résultat, veuillez vérifier l\'orthographe de la ville et reessayez.');
             }
 
             if( $statusCode !== 200 ) {

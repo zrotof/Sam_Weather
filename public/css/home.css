@@ -1,14 +1,14 @@
 body{
     color: black;
+    background-image: url( ../img/HomeBG4.png ) ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main{
 
     opacity: inherit;
     display: flex;
     height: 93%;
-    background-image: url( ../img/HomeBG4.png ) ;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-top: solid black;
 }
 
@@ -17,71 +17,50 @@ body{
     height: 100%;
     width: 20%;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.68;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+
+
 .section{
 
     height: 100%;
     width: 80%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
-
-.apropos{
-    border: solid red;
-    width: 25%;
-    height: 100%;
-
-    
-}
 
 .greetings{
 
-    height: 62%;
-    width: 50%;
-    border: 1vh solid whitesmoke;
+    
+    margin-top:15%;
     color: white;
-    margin-right: 15%;
+
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 2%;
     text-align: justify;
+    
    
 }
 
 .greetings h1{
     text-align: center;
     margin-bottom: 4%;
+    font-size: 9vh;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px whitesmoke, 0 0 1em white;
 }
-blockquote {
-    margin: 0;
+p {
+
+  padding-left: 10%;
+  padding-right: 10%;
 }
-
-blockquote p {
-    padding: 15px;
-    border-radius: 5px;
-}
-
-blockquote p::before {
-    content: '\201C';
-}
-
-
-
-
-
-
-
-
-
-
 
 
 

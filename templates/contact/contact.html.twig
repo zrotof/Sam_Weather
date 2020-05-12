@@ -15,16 +15,23 @@
 
 <div class="form">
 
-{% for message in app.flashes('message') %}
+{% if succeed  == 'true' %}
 
-    <div class="alert alert-success" role="alert">
+    <div  class="alert alert-success" role="alert">
         {{ message }}
     </div>
-{% endfor %}
+{% endif %}
+
+{% if succeed  == 'false' %}
+
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+{% endif %}
 
     <div class="head">
         
-        <h1> Bienvenu dans ma page de contact</h1>
+        <h1> CONTACT</h1>
 
     </div>
 
