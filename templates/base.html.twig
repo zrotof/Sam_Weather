@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Météo{% endblock %}</title>
+
+        <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+
+
+             <link rel="stylesheet" href="{{ asset('css/base.css') }}" />
+        {% block stylesheets %}
+        {% endblock %}
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div id="logo_name">
+        <a  href= "{{ path('home')}}">SAMUEL WEATHER</a>
+        </div>
+
+        <div id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href= "{{ path('home')}}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "{{ path('weather')}}">Météo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "{{ path('contact')}}">Me contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+        {% block body %}{% endblock %}
+
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    
+    color: whitesmoke;
+    height: 100%;
+}
+
+
+.form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 93%;
+}
+.head{
+
+    padding: 2% 0;
+   text-align: center;
+}
+
+
+
+.corps{
+
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#contact_message{
+    height: 35vh;
+    
+}

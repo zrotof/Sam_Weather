@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/weather.css') }}" />
+{% endblock %}
+
+
+{% block body %}
+
+
+{% if message != null %}
+
+        <div id="error-message" class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+
+    {% endif %}
+<div class="corps">
+
+    
+
+
+    <div class="head">    
+        
+            {{ form_start(searchBarForm) }}
+               
+                <button type="submit">Search</button>
+                {{ form_row(searchBarForm.town) }}
+                
+            {{ form_end(searchBarForm) }}
+        
+
+        {% if message == null %}
+                    <h1>Météo de {{ weathers[0].town}}, {{ weathers[0].country}} des 24 prochaines heures</h1>
+    </div>
+        
+    <div class="weather">
+        
+        {% for weather in weathers %}
+
+            <div class="block">    
+
+
+                        {% if weather.icon == 'Clear' %}
+                            <div class="icon sunny">
+                                <div class="sun">
+                                    <div class="rays"></div>
+                                </div>
+                            </div>
+                        
+                        {% elseif weather.icon == 'Drizzle' %}
+                            <div class="icon sun-shower">
+                                <div class="cloud"></div>
+                                <div class="sun">
+                                    <div class="rays"></div>
+                                </div>
+                                <div class="rain"></div>
+
+                            </div>
+                        {% elseif weather.icon == 'Rain' %}
+                            <div class="icon rainy">
+                                <div class="cloud"></div>
+                                <div class="rain"></div>
+                            </div>
+
+                        {% elseif weather.icon == 'Clouds' %}
+                            <div class="icon cloudy">
+                                <div class="cloud"></div>
+                                <div class="cloud"></div>
+                            </div>
+
+                        {% elseif weather.icon == 'Thunderstorm' %}
+                            <div class="icon thunder-storm">
+                                <div class="cloud"></div>
+                                    <div class="lightning">
+                                        <div class="bolt"></div>
+                                        <div class="bolt"></div>
+                                    </div>
+                            </div>
+
+                        {% elseif weather.icon == 'Snow' %}
+
+                            <div class="icon flurries">
+                                <div class="cloud"></div>
+                                <div class="snow">
+                                    <div class="flake"></div>
+                                    <div class="flake"></div>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    <p> <strong>{{ weather.temperature }}</strong> °C </p>
+                    <p> {{ weather.description | capitalize  }} </p>
+                
+                    <p> Vent: {{ weather.wind }} Km/h </p>
+                    
+                    <p> Humidité: {{ weather.humidity }} % </p>
+                    <p> heure: {{ weather.hour }} </p>
+                </div>   
+        
+
+            {% endfor %}
+
+        {% endif %}
+
+             
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+ 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+       
+{% endblock %}
+
+{% block body %}
+
+    <div class="main">
+        <div class="aside">
+
+            <div class="icon sunny">
+                <div class="sun">
+                    <div class="rays"></div>
+                </div>
+            </div>
+       
+            <div class="icon sun-shower">
+                <div class="cloud"></div>
+                <div class="sun">
+                    <div class="rays"></div>
+                </div>
+                <div class="rain"></div>
+
+            </div>
+
+            <div class="icon rainy">
+                <div class="cloud"></div>
+                <div class="rain"></div>
+            </div>
+
+            <div class="icon cloudy">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+            </div>
+
+            <div class="icon thunder-storm">
+                <div class="cloud"></div>
+                    <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                </div>
+            </div>
+
+
+            <div class="icon flurries">
+                <div class="cloud"></div>
+                <div class="snow">
+                    <div class="flake"></div>
+                    <div class="flake"></div>
+                </div>
+            </div>
+
+    </div>
+
+
+
+    <div class="section">
+        <div class="apropos">
+            
+            <h1> Un peu d'histoire</h1>
+                  
+        </div>
+        
+
+        <div class="greetings">
+
+            <h1>  Bienvenu cher visiteur </h1>
+            <blockquote>
+            <p>Vous voulez connaitre quel temps il fait à 
+            Venise, à Kyoto, à Istanbul ou à Nairobi ? Rassurez-vous, vous êtes au bon endroit.
+            Vous l'avez compris, nous vous fournissons
+            les données météorologiques de plus de 200000 villes. 
+            </p>
+            </blockquote>
+    
+        </div>
+        
+        
+    </div>
+
+    </div>
+
+
+{% endblock %}
